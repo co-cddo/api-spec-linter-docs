@@ -12,4 +12,5 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :x64_mingw, :jruby]
 gem 'govuk_tech_docs'
 
 gem 'puma'
+gem 'rack'
 gem 'rack-contrib'

@@ -181,6 +181,7 @@ PLATFORMS
 DEPENDENCIES
   govuk_tech_docs
   puma
+  rack
   rack-contrib
   tzinfo-data
   wdm (~> 0.1.0)
