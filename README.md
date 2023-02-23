@@ -1,15 +1,11 @@
 # Technical Documentation
 
-This project uses the [Tech Docs Template][template], which is a [Middleman template][mmt] that you can use to build technical documentation using a GOV.UK style.
+This application is the technical documentation/remediation wiki used in conjunction with https://cddo-api-spec-linter.herokuapp.com/.
 
-You’re welcome to use the template even if your service isn’t considered part of GOV.UK, but your site or service must not:
+This application acts as a service to allow technical and non-technical users to update the multiple rulesets to allow developers to build API’s based off the [OpenAPI Specification](https://swagger.io/specification/).
 
-- identify itself as being part of GOV.UK
-- use the crown or GOV.UK logotype in the header
-- use the GDS Transport typeface
-- suggest that it’s an official UK government website if it’s not
+This app also acts as a Remediation Wiki to allow developers to lint their OpenAPI specs with our [Linter](https://cddo-api-spec-linter.herokuapp.com/).
 
-👉 To find out more about setting up and managing content for a website using this template, see the [Tech Docs Template documentation][tdt-docs].
 
 ## Before you start
 
@@ -44,7 +40,6 @@ bundle exec middleman server
 
 To shut down the Middleman instance running on your machine, use `ctrl+C`.
 
-If you make changes to the `config/tech-docs.yml` configuration file, you need to restart Middleman to see the changes.
 
 ## Build
 
@@ -56,11 +51,6 @@ bundle exec middleman build
 
 Every time you run this command, the `build` folder gets generated from scratch. This means any changes to the `build` folder that are not part of the build command will get overwritten.
 
-## Troubleshooting
-
-Run `bundle update` to make sure you're using the most recent Ruby gem versions.
-
-Run `bundle exec middleman build --verbose` to get detailed error messages to help with finding the problem.
 
 ## Licence
 
