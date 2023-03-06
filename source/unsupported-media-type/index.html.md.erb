@@ -1,0 +1,39 @@
+---
+title: Unsupported media type
+---
+
+# HTTP 415 Unsupported media type
+
+## Description
+A 415 Unsupported Media Type error is returned when the consumer makes a request with a payload in a format that is not supported by the provider. Declaring a 415 as a response makes it clear to the consumer why their request failed. PUT, POST and PATCH operations should all declare a 415 as a response.
+
+## Example
+The following is an example of how an operation missing a 415 response might look:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  "/":
+    post:
+      responses:
+        '200': {}
+```
+
+
+## Remediation
+The following is how an example of how an operation that does declare a 415 response:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  "/":
+    post:
+      responses:
+        '415': {}
+```

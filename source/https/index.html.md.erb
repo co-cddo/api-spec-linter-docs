@@ -1,0 +1,45 @@
+---
+title: HTTPS
+---
+
+# Servers must use the HTTPS protocol
+
+
+## Description
+Use of HTTPS is recommended in the [API guidance on gov.uk](https://www.gov.uk/guidance/gds-api-technical-and-data-standards#use-https).
+
+## Example
+The following is an example of how this type of risk could look in your API definition:
+
+```yaml
+openapi: 3.1.0
+  info:
+  title: ''
+  version: '1.0.0'
+  paths: {}
+  servers:
+    - url: http://api.example.com
+```
+
+## Possible exploit scenario
+Many services collect personal information from users or present information to them which they then use to make important decisions.
+
+It’s important that you build a service that does not allow this information to be intercepted or modified by malicious third parties as it travels over the internet.
+
+This means you must make sure your service (including APIs) is only accessible through secure connections. For web-based services this means HTTPS only, with an HTTP Strict Transport Security (HSTS) configuration as explained in this guide.
+
+(HTTPS describes the use of TLS, a lower level protocol previously known as SSL, to secure HTTP requests.)
+
+
+## Remediation
+The following is how this should look in your API definition:
+
+```yaml
+openapi: 3.1.0
+  info:
+  title: ''
+  version: '1.0.0'
+  paths: {}
+  servers:
+    - url: https://api.example.com
+```
