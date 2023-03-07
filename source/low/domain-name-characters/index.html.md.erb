@@ -1,0 +1,35 @@
+---
+title: Domain name characters
+---
+
+# Domain name characters
+
+
+## Description
+The [guidance on gov.uk](https://www.gov.uk/guidance/get-an-api-domain-on-govuk) specifies that an API domain name must contain only alphanumeric characters (0-9 and a-z) and the ‘-’ (dash) symbol.
+
+## Example
+The following is an example of a domain name which would fail this rule because it contains an invalid character:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths: {}
+servers:
+  - url: 'https://vehicle-registration-number-*.api.gov.uk'
+```
+
+## Remediation
+The following is an example of a valid domain name:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths: {}
+servers:
+  - url: 'https://vehicle-registration-number.api.gov.uk'
+```

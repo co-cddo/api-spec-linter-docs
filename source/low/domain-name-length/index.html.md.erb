@@ -1,0 +1,35 @@
+---
+title: Domain name length
+---
+
+# Domain name length
+
+
+## Description
+The [guidance on gov.uk](https://www.gov.uk/guidance/get-an-api-domain-on-govuk) specifies that an API domain should be between 3 and 63 characters long.
+
+## Example
+The following is an example of a domain name which would fail this rule because it is too long:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths: {}
+servers:
+  - url: 'https://vehicle-registration-number-vehicle-registration-number-vehicles.api.gov.uk'
+```
+
+## Remediation
+The following is an example of a valid domain name:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths: {}
+servers:
+  - url: 'https://vehicle-registration-number.api.gov.uk'
+```

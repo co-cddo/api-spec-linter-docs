@@ -1,0 +1,45 @@
+---
+title: Operation ID
+---
+
+# OperationID should be present for every endpoint
+
+## Description
+The operationID is a Unique string used to identify the operation. The id MUST be unique among all operations described in the API.
+Every endpoint must have an operationId specified.
+
+The operationId will be used to name methods in the API clients. As such, changes to the names should be treated as breaking changes, and so we should be careful and explicit with our naming of them
+
+This ID will become the method name in the SDK.
+
+note: The operationId value is case-sensitive. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions.
+
+## Example
+The following is an example of an OpenAPI document which defines an operation that is missing an operationId:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  /ping:
+    get:
+      summary: Checks if the server is alive
+```
+
+
+## Remediation
+The following is an example of an OpenAPI document which defines an operation that does have an operationId:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  /ping:
+    get:
+      summary: Checks if the server is alive
+      operationId: ping
+```

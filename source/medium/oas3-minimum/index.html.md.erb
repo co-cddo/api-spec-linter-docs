@@ -1,0 +1,30 @@
+---
+title: OAS3 minimum
+---
+
+# OpenAPI version must be 3 or higher
+
+
+## Description
+The version of the OpenAPI document must be version 3 or higher. OpenAPI v3.0 is the most recent official major release version.
+It contains more features than the previous major version. You can read more about the differences in a [blog post on the Stoplight site](https://blog.stoplight.io/difference-between-open-v2-v3-v31).
+
+## Example
+The following is an example of how your OpenAPI document that is using an old version:
+
+```yaml
+openapi: 2.0.0
+info:
+  title: ''
+  version: '1.0.0'
+```
+
+## Remediation
+The following is an example of an OpenAPI document using the latest major version of OpenAPI:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+```

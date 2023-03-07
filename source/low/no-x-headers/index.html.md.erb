@@ -1,0 +1,46 @@
+---
+title: X- prefix
+---
+
+# Headers should not use the X- prefix
+
+
+## Description
+X- was originally used as a prefix for experimental HTTP headers, however it led to unstandardised headers being used in production. Therefore [rfc6648](https://datatracker.ietf.org/doc/html/rfc6648) deprecates this convention.
+
+## Example
+The following is an example of how this might look in your OpenAPI document:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  "/ping":
+    get:
+      parameters:
+        - in: header
+          name: X-Request-ID
+          schema:
+            type: string
+```
+
+## Remediation
+The following is how the request header would look without the `X-` prefix:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  /ping:
+    get:
+      summary: Checks if the server is alive
+      parameters:
+        - in: header
+          name: Request-ID
+          schema:
+            type: string
+```

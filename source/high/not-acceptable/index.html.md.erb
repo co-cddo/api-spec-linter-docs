@@ -1,0 +1,40 @@
+---
+title: Unsupported media type
+weight: 1
+---
+
+# HTTP 415 Unsupported media type
+
+## Description
+A 406 Not Acceptable error is returned when the consumer makes a request with a value in a content negotiation header that the producer can't handle. For example the consumer might request a version, a media type or a language etc. that the producer does not support. Declaring a 406 as a response makes it clear to the consumer why their request failed.
+
+## Example
+The following is an example of how an operation missing a 406 response might look:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  "/":
+    post:
+      responses:
+        '200': {}
+```
+
+
+## Remediation
+The following is how an example of how an operation that does declare a 415 response:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  "/":
+    post:
+      responses:
+        '406': {}
+```
