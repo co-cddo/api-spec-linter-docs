@@ -1,0 +1,39 @@
+---
+title: Kebab case for paths
+---
+
+# Paths should use kebab case
+
+## Description
+It is best practice to use kebab case (words separated by a hyphen) for URL names, rather than other cases such as camel case or snake case.
+
+## Example
+The following is an example of an OpenAPI document which has a path name that does not use kebab case:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  /path-parameter:
+    get:
+      summary: Checks if the server is alive
+      operationId: ping
+```
+
+
+## Remediation
+The following is an example of an OpenAPI document which has a path name that does use kebab case:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths:
+  /path-parameter:
+    get:
+      summary: Checks if the server is alive
+      operationId: ping
+```

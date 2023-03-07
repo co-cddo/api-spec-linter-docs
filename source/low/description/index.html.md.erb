@@ -1,0 +1,32 @@
+---
+title: Description
+---
+
+# The info object must contain a description
+
+
+## Description
+A description helps people understand what the API can be used for and is useful for making your API more discoverable. The [gov.uk API standards](https://www.gov.uk/guidance/gds-api-technical-and-data-standards) recommends putting your API on the cross-government API catalogue, and description is one of the required fields in our [proposed metadata model](https://github.com/co-cddo/federated-api-model/blob/main/schemas/v1alpha/api-metadata.json) for the catalogue. Having the description field present could also be helpful in generating catalogue entries from OpenAPI documents in the future.
+
+## Example
+The following is an example of how your OpenAPI document might look if it's missing a description:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+paths: {}
+```
+
+## Remediation
+The following is an example of an OpenAPI document with a description:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: ''
+  version: '1.0.0'
+  description: 'A description of the API.'
+paths: {}
+```
